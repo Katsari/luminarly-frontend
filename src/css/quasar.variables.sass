@@ -16,9 +16,19 @@ $primary   : #59ede5
 $secondary : #58d2a3
 $accent    : #9C27B0
 
-$dark      : #3c3c3c
+// Used by dark mode
+$dark-page : #121212
+$dark      : #212121
 
 $positive  : #43b04e
 $negative  : #ed5959
 $info      : #31CCEC
 $warning   : #e6bf55
+
+// Import Montserrat and Josefin Slab fonts with multiple weights
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300;400;600;700&display=swap')
+
+// Set the default font-family
+$typography-font-family: 'Montserrat', sans-serif !default
+$text-weights: (thin: 100, light: 300, regular: 400, medium: 500, bold: 700, bolder: 900) !default
