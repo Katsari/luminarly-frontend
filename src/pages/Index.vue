@@ -1,11 +1,37 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="row justify-evenly">
+    <q-parallax
+      :height="600"
+      src="https://cdna.artstation.com/p/assets/images/images/000/632/544/4k/wavenwater-michael-guimont-storyframe-16-00-ver-07.jpg?1443929476"
+    >
+      <div class="row q-col-gutter-md q-pa-md">
+        <div class="col-12">
+          <h3 class="text-primary">Luminarly</h3>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="text-subtitle1">
+            A tool for artists and creatives that allows you to create
+            moodboards and collections from images all over the internet under
+            Creative Commons license.
+          </p>
+        </div>
+        <div class="col-12 col-md-8">
+          <q-input
+            dark
+            filled
+            v-model="text"
+            label="Search for projects"
+            :readonly="readonly"
+            :disable="disable"
+          >
+            <template v-slot:append>
+              <q-icon name="search" class="text-primary cursor-pointer" />
+            </template>
+          </q-input>
+        </div>
+      </div>
+    </q-parallax>
+
   </q-page>
 </template>
 
@@ -15,7 +41,7 @@ import { Todo, Meta } from 'components/models';
 
 export default {
   name: 'PageIndex',
-  components: { ExampleComponent },
+  components: {},
   data() {
     const todos: Todo[] = [
       {
@@ -44,5 +70,5 @@ export default {
     };
     return { todos, meta };
   }
-}
+};
 </script>
